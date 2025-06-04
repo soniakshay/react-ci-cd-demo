@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
         <div  className={'box'} >
-            <h1>Ohoo Great R!.</h1>
+            <h1>Ohoo Great Raveena!.</h1>
 
         </div>
     </>
