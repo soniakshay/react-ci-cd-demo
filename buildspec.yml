@@ -8,18 +8,19 @@ phases:
       - echo "Installing dependencies..."
       - npm ci  # or 'npm install' if you prefer
 
-    build:
-      commands:
-        - echo "Building Next.js project..."
-        - npm run build
+  build:
+    commands:
+      - echo "Building Next.js project..."
+      - npm run build
+      - echo "Exporting static site..."
+      - npm run export
 
-post_build:
+  post_build:
     commands:
       - echo "Post-build: listing output folder"
       - ls -la
       - ls -la out || echo "❌ 'out' folder not found"
       - ls -la .next || echo "❌ '.next' folder not found"
-
 
 artifacts:
   files:
