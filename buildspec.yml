@@ -19,5 +19,5 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: .next
+  base-directory: out
   discard-paths: no
