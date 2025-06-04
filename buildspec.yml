@@ -5,22 +5,25 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing dependencies..."
-      - npm ci  # or 'npm install' if you prefer
+      - echo "🔧 Installing dependencies..."
+      - npm ci
+      - echo "✅ Installed dependencies"
 
   build:
     commands:
-      - echo "Building Next.js project..."
+      - echo "⚙️ Building Next.js project..."
       - npm run build
-      - echo "Exporting static site..."
+      - echo "📦 Exporting static site..."
       - npm run export
 
   post_build:
     commands:
-      - echo "Post-build: listing output folder"
+      - echo "📁 Verifying output folder"
       - ls -la
-      - ls -la out || echo "❌ 'out' folder not found"
-      - ls -la .next || echo "❌ '.next' folder not found"
+      - ls -la out || (echo "❌ 'out' folder not found. Export failed." && exit 1)
+      - echo "🚀 Uploading to S3..."
+      - aws s3 sync out/ s3://next-app-aws-learning-demo --delete
+      - echo "✅ Deployment complete"
 
 artifacts:
   files:
