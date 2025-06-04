@@ -22,7 +22,6 @@ phases:
       - ls -la
       - ls -la out || (echo "❌ 'out' folder not found. Export failed." && exit 1)
       - echo "🚀 Uploading to S3..."
-      - aws s3 sync out/ s3://next-app-aws-learning-demo --delete
       - echo "✅ Deployment complete"
 
 artifacts:
