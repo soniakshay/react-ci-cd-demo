@@ -5,13 +5,16 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo Installing dependencies...
-      - npm ci --legacy-peer-deps
+      - echo "Installing dependencies..."
+      - npm ci  # or 'npm install' if you prefer
 
-  build:
-    commands:
-      - echo Building the React app...
-      - npm run build
+    build:
+      commands:
+        - echo "Building Next.js project..."
+        - npm run build
+        - echo "Exporting static site..."
+        - npm run export
+
 
 artifacts:
   files:
