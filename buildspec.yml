@@ -13,6 +13,9 @@ phases:
     commands:
       - echo "⚙️ Building Next.js project..."
       - npm run build
+      - echo "export project"
+      - npm run export
+
 
   post_build:
     commands:
