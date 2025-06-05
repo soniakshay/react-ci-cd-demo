@@ -53,7 +53,7 @@
       <change beforePath="$PROJECT_DIR$/.next/types/app/page.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/types/cache-life.d.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/types/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buildspec.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <updated>1749103392777</updated>
       <workItem from="1749103394749" duration="646000" />
       <workItem from="1749118899352" duration="1086000" />
-      <workItem from="1749121244352" duration="998000" />
+      <workItem from="1749121244352" duration="1513000" />
     </task>
     <servers />
   </component>
